@@ -1,14 +1,13 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
-import Header from '../components/shared/Header';
+import BaseLayout from '../components/layouts/BaseLayout';
 
 class Index extends Component {
   render() {
     return(
-      <Fragment>
-        <Header />
+      <BaseLayout>
         <h1>Index Page</h1>
-      </Fragment>
+      </BaseLayout>
     );
   }
 }
