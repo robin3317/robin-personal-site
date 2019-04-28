@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react';
 
-class Index extends Component {
+class Blog extends Component {
   render() {
     return(
       <Fragment>
-        <h1>Index Page</h1>
+        <h1>Blog Page</h1>
       </Fragment>
     );
   }
 }
 
-export default Index;
+export default Blog;
