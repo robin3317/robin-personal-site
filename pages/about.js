@@ -1,11 +1,13 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+
+import BaseLayout from '../components/layouts/BaseLayout';
 
 class About extends Component {
   render() {
     return(
-      <Fragment>
+      <BaseLayout>
         <h1>About Page</h1>
-      </Fragment>
+      </BaseLayout>
     );
   }
 }
