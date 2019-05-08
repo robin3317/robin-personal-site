@@ -1,6 +1,6 @@
-import { Fragment } from 'react';
+import { Fragment } from 'react'
 
-import Header from '../shared/Header';
+import Header from '../shared/Header'
 
 const BaseLayout = (props) => {
   return(
@@ -8,7 +8,7 @@ const BaseLayout = (props) => {
       <Header />
       {props.children}
     </Fragment>
-  );
+  )
 }
 
-export default BaseLayout;
+export default BaseLayout

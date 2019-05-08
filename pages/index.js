@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import axios from 'axios'
 
-import BaseLayout from '../components/layouts/BaseLayout';
+import BaseLayout from '../components/layouts/BaseLayout'
 
 class Index extends Component {
   render() {
@@ -12,4 +13,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default Index

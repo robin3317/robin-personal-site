@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react';
-import Link from 'next/link';
+import React, { Component, Fragment } from 'react'
+import Link from 'next/link'
 
 class Header extends Component {
   render() {
@@ -11,8 +11,8 @@ class Header extends Component {
         <Link href="/blog"><a>Blog</a></Link>
         <Link href="/cv"><a>CV</a></Link>
       </Fragment>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header
