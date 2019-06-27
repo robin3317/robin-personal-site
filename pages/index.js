@@ -3,6 +3,8 @@ import axios from 'axios'
 
 import BaseLayout from '../components/layouts/BaseLayout'
 
+import '../styles/main.scss';
+
 class Index extends Component {
   static async getInitialProps() {
     let userData = {}
