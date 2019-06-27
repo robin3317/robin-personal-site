@@ -23,7 +23,7 @@ class Portfolio extends Component {
     return posts.map(post => {
       return(
         <li key={post.id}>
-          <Link as={`/portfolioDetails/${post.id}`} href={`/portfolioDetails?title=${post.title}`}>
+          <Link as={`/portfolioDetails/${post.id}`} href={`/portfolioDetails?id=${post.id}`}>
             <a>{post.title}</a>
           </Link>
         </li>

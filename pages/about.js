@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-
 import BaseLayout from '../components/layouts/BaseLayout'
+import '../styles/about.scss';
 
 class About extends Component {
   render() {

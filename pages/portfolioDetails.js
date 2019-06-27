@@ -5,12 +5,12 @@ import BaseLayout from '../components/layouts/BaseLayout'
 
 class PortfolioDetails extends Component {
   render() {
-    const { title } = this.props.router.query
+    const { id } = this.props.router.query
 
     return(
       <BaseLayout>
         <h1>PortfolioDetails Page</h1>
-        <h2>{title}</h2>
+        <h2>{id}</h2>
       </BaseLayout>
     )
   }
