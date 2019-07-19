@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'next/router'
 
 import BaseLayout from '../components/layouts/BaseLayout'
-import axios from 'axios';
+import axios from 'axios'
 
 class PortfolioDetails extends Component {
 
