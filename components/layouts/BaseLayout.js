@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment } from 'react'
 
 import Header from '../shared/Header';
 import '../../styles/main.scss';
@@ -9,7 +9,7 @@ const BaseLayout = (props) => {
       <Header />
       {props.children}
     </Fragment>
-  );
+  )
 }
 
-export default BaseLayout;
+export default BaseLayout

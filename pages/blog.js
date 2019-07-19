@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import BaseLayout from '../components/layouts/BaseLayout';
+import BaseLayout from '../components/layouts/BaseLayout'
 
 class Blog extends Component {
   render() {
@@ -8,8 +8,8 @@ class Blog extends Component {
       <BaseLayout>
         <h1>Blog Page</h1>
       </BaseLayout>
-    );
+    )
   }
 }
 
-export default Blog;
+export default Blog
