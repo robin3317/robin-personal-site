@@ -1,14 +1,18 @@
-import { Fragment } from 'react'
-
-import Header from '../shared/Header';
-import '../../styles/main.scss';
+import React from 'react'
+import Header from '../shared/Header'
 
 const BaseLayout = (props) => {
-  return(
-    <Fragment>
+  const { className, children } = props
+
+  return (
+    <div className="layout-container" >
       <Header />
-      {props.children}
-    </Fragment>
+      <main className={`cover ${className}`}>
+        <div className="wrapper">
+          {children}
+        </div>
+      </main>
+    </div>
   )
 }
 
