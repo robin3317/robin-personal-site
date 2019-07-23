@@ -23,30 +23,21 @@ class Index extends Component {
     return(
       <BaseLayout className="cover">
         <div className="main-section">
-          <div className="background-image">
-            <img src="../static/images/background-index.png" />
-          </div>
           <Container>
             <Row>
-              <Col md="6">
+              <Col md="5">
                 <div className="hero-section">
-                  <div className={`flipper`}>
-                    <div className="back">
-                      <div className="hero-section-content">
-                        <h2> Full Stack Web Developer </h2>
-                        <div className="hero-section-content-intro">
-                          Have a look at my portfolio and job history.
-                        </div>
-                      </div>
-                      <img className="image" src="../static/images/index-2.png"/>
-                      <div className="shadow-custom">
-                        <div className="shadow-inner"> </div>
-                      </div>
-                    </div>
+                  <div className="center">
+                    <img className="image" src="../static/images/avatar.png"/>
+                  </div>
+                  <div className="center">
+                    <h2 className="hero-section__title">Full Stack Developer</h2>
+                    <p className="hero-section__subtitle">Love to convert thoughts into code!</p>
                   </div>
                 </div>
               </Col>
-              <Col md="6" className="hero-welcome-wrapper">
+
+              <Col md="7" className="hero-welcome-wrapper">
                 <div className="hero-welcome-text">
                   <h1>
                     Welcome to the portfolio website of Abdur Rahman Robin.
