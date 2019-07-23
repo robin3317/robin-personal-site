@@ -1,9 +1,21 @@
 // ------------- INDEX PAGE -------------
 .cover {
-  background-image: linear-gradient(45deg,#00aeef 0%,#096fb9 100%);
+  background-image: linear-gradient(45deg,#ff758c 0%,#ff7eb3 100%);
+  background-image: linear-gradient(45deg, #84fab0 0%, #8fd3f4 100%);
+  background-image: linear-gradient(45deg, #a6c0fe 0%, #f68084 100%);
+  //--background-image: linear-gradient(to right, #fa709a 0%, #a6c0fe 100%);
+  //background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+  //background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
   overflow: hidden;
   position: relative;
 }
+
+// Light green: #7ed56f
+// Medium green: #55c57a
+// Dark green: #28b485
+
+// #a18cd1, #fbc2eb;
+// #ff758c, #ff7eb3
 
 .wrapper {
   min-height: 100vh;

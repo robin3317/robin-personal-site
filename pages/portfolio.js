@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from '../routes'
 
 import BaseLayout from '../components/layouts/BaseLayout'
+import BasePage from '../components/layouts/BasePage'
 
 class Portfolio extends Component {
   // Fetching data from api
@@ -36,8 +37,10 @@ class Portfolio extends Component {
 
     return(
       <BaseLayout>
-        <h1>Portfolio Page</h1>
-        <ul>{this.renderPosts(posts)}</ul>
+        <BasePage>
+          <h1>Portfolio Page</h1>
+          <ul>{this.renderPosts(posts)}</ul>
+        </BasePage>
       </BaseLayout>
     )
   }

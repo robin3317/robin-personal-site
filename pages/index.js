@@ -38,7 +38,7 @@ class Index extends Component {
                           Have a look at my portfolio and job history.
                         </div>
                       </div>
-                      <img className="image" src="../static/images/index-1.png"/>
+                      <img className="image" src="../static/images/index-2.png"/>
                       <div className="shadow-custom">
                         <div className="shadow-inner"> </div>
                       </div>
