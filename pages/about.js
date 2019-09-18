@@ -1,14 +1,17 @@
-import React, { Component } from 'react'
-import BaseLayout from '../components/layouts/BaseLayout'
+import React, { Component } from "react";
+import BaseLayout from "../components/layouts/BaseLayout";
+import BasePage from "../components/layouts/BasePage";
 
 class About extends Component {
   render() {
-    return(
+    return (
       <BaseLayout>
-        <h1>About Page</h1>
+        <BasePage>
+          <h1>About Page</h1>
+        </BasePage>
       </BaseLayout>
-    )
+    );
   }
 }
 
-export default About
+export default About;

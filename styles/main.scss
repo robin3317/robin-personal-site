@@ -1,14 +1,25 @@
 @import './index';
+@import './header';
 
 html, body {
   height:100%;
   width:100%;
 }
 
-
 .self-typed {
   font-size: 31px;
   font-weight: bold;
   letter-spacing: 2px;
   color: white;
+}
+
+.absolute {
+  position: absolute;
+}
+.center {
+  text-align: center;
+}
+
+.base-page {
+  margin-top: 130px;
 }
