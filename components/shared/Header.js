@@ -1,49 +1,30 @@
-// import React, { Component, Fragment } from 'react'
-// import Link from 'next/link'
-
-// class Header extends Component {
-//   render() {
-//     return(
-//       <Fragment>
-//         <Link href="/"><a>Home</a></Link>
-//         <Link href="/about"><a>About</a></Link>
-//         <Link href="/portfolio"><a>Portfolio</a></Link>
-//         <Link href="/blog"><a>Blog</a></Link>
-//         <Link href="/cv"><a>CV</a></Link>
-//       </Fragment>
-//     )
-//   }
-// }
-
-// export default Header
-
-import React from 'react'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
-import Link from 'next/link'
+import React from 'react';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import Link from 'next/link';
 
 const BsNavLink = props => {
-  const { route, title } = props
+  const { route, title } = props;
 
   return(
     <Link href={route}>
       <a className="nav-link port-navbar-link">{title}</a>
     </Link>
-  )
+  );
 }
 
 class Header extends React.Component {
   constructor(props) {
     super(props)
 
-    this.toggle = this.toggle.bind(this)
+    this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
-    }
+    };
   }
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
-    })
+    });
   }
 
   render() {
@@ -81,8 +62,8 @@ class Header extends React.Component {
           </Collapse>
         </Navbar>
       </div>
-    )
+    );
   }
 }
 
-export default Header
+export default Header;

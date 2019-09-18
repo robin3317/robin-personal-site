@@ -1,5 +1,5 @@
-import React from 'react'
-import { Container } from 'reactstrap'
+import React from 'react';
+import { Container } from 'reactstrap';
 
 const BasePage = props => {
   const className = props.className || '';
@@ -8,7 +8,7 @@ const BasePage = props => {
     <Container className={`base-page ${className}`}>
       {props.children}
     </Container>
-  )
+  );
 }
 
-export default BasePage
+export default BasePage;
