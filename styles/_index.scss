@@ -46,8 +46,6 @@
 .hero-welcome-text > h1 {
   color: white;
   text-transform: uppercase;
-  font-size: 27px;
-  margin-top: 80px;
 }
 
 .hero-welcome-bio {
@@ -66,7 +64,9 @@
 }
 
 .hero-welcome-wrapper {
-  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (max-width: 991px) {
@@ -82,4 +82,10 @@
 .shadow-custom-2 {
   border: 2px solid #f37d49;
   box-shadow: -17px 13px 41px rgba(13, 78, 158, 0.3);
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
 }
