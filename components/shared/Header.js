@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Collapse,
   Navbar,
@@ -7,9 +7,9 @@ import {
   Nav,
   NavItem,
   NavLink
-} from "reactstrap";
-import Link from "next/link";
-import auth0 from "../../services/auth0";
+} from 'reactstrap';
+import Link from 'next/link';
+import auth0 from '../../services/auth0';
 
 const Login = () => {
   return (
