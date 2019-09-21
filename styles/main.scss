@@ -1,9 +1,10 @@
-@import './index';
-@import './header';
+@import "./index";
+@import "./header";
 
-html, body {
-  height:100%;
-  width:100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
 .self-typed {
@@ -22,4 +23,8 @@ html, body {
 
 .base-page {
   margin-top: 130px;
+}
+
+.clickable {
+  cursor: pointer;
 }
