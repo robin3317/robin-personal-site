@@ -20,7 +20,14 @@ const Login = () => {
 };
 
 const Logout = () => {
-  return <span className="nav-link port-navbar-link clickable">Logout</span>;
+  return (
+    <span
+      onClick={auth0.logout}
+      className="nav-link port-navbar-link clickable"
+    >
+      Logout
+    </span>
+  );
 };
 
 const BsNavLink = props => {
@@ -49,6 +56,7 @@ class Header extends React.Component {
   }
 
   render() {
+    console.log(auth0.isAuthenticated());
     return (
       <div>
         <Navbar
@@ -83,13 +91,15 @@ class Header extends React.Component {
                 <BsNavLink route="/cv" title="CV" />
               </NavItem>
 
-              <NavItem className="port-navbar-item">
-                <Login />
-              </NavItem>
-
-              <NavItem className="port-navbar-item">
-                <Logout />
-              </NavItem>
+              {auth0.isAuthenticated() ? (
+                <NavItem className="port-navbar-item">
+                  <Logout />
+                </NavItem>
+              ) : (
+                <NavItem className="port-navbar-item">
+                  <Login />
+                </NavItem>
+              )}
             </Nav>
           </Collapse>
         </Navbar>
