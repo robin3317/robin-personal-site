@@ -56,7 +56,6 @@ class Header extends React.Component {
   }
 
   render() {
-    console.log(auth0.isAuthenticated());
     return (
       <div>
         <Navbar
