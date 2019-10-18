@@ -56,6 +56,8 @@ class Header extends React.Component {
   }
 
   render() {
+    const { isAuthenticated } = this.props;
+
     return (
       <div>
         <Navbar
@@ -90,7 +92,7 @@ class Header extends React.Component {
                 <BsNavLink route="/cv" title="CV" />
               </NavItem>
 
-              {auth0.isAuthenticated() ? (
+              {isAuthenticated ? (
                 <NavItem className="port-navbar-item">
                   <Logout />
                 </NavItem>

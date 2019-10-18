@@ -57,7 +57,6 @@ class Auth0 {
   };
 
   clientAuth = () => {
-    console.log('Print from clientAuth: ', this.isAuthenticated());
     return this.isAuthenticated();
   };
 

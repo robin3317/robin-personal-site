@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import axios from "axios";
-import ReactTyped from "react-typed";
+import React, { Component } from 'react';
+import axios from 'axios';
+import ReactTyped from 'react-typed';
 
-import BaseLayout from "../components/layouts/BaseLayout";
-import { Container, Row, Col } from "reactstrap";
+import BaseLayout from '../components/layouts/BaseLayout';
+import { Container, Row, Col } from 'reactstrap';
 
 class Index extends Component {
   static async getInitialProps() {
     let userData = {};
     try {
       const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/todos/1"
+        'https://jsonplaceholder.typicode.com/todos/1'
       );
       userData = response.data;
     } catch (error) {
@@ -24,7 +24,7 @@ class Index extends Component {
     const { userData } = this.props;
 
     return (
-      <BaseLayout className="cover">
+      <BaseLayout className="cover" {...this.props.auth}>
         <div className="main-section">
           <Container>
             <Row>
@@ -58,7 +58,7 @@ class Index extends Component {
                   loop={true}
                   typeSpeed={50}
                   backSpeed={20}
-                  strings={["Developer", "Content Creator", "Team Player"]}
+                  strings={['Developer', 'Content Creator', 'Team Player']}
                   smartBackspace
                   fadeOut={false}
                   fadeOutDelay={100}

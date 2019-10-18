@@ -15,7 +15,7 @@ class Callback extends Component {
     return (
       <BaseLayout>
         <BasePage>
-          <h1>Login....</h1>
+          <h1>Verifying Logging Data</h1>
         </BasePage>
       </BaseLayout>
     );

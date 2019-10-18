@@ -16,15 +16,17 @@ class MyApp extends App {
       pageProps = await Component.getInitialProps(ctx);
     }
 
-    return { pageProps };
+    const auth = { isAuthenticated };
+
+    return { pageProps, auth };
   }
 
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, auth } = this.props;
 
     return (
       <Container>
-        <Component {...pageProps} />
+        <Component {...pageProps} auth={auth} />
       </Container>
     );
   }

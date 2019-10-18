@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import BaseLayout from "../components/layouts/BaseLayout";
-import BasePage from "../components/layouts/BasePage";
+import BaseLayout from '../components/layouts/BaseLayout';
+import BasePage from '../components/layouts/BasePage';
 
 class Blog extends Component {
   render() {
     return (
-      <BaseLayout>
+      <BaseLayout {...this.props.auth}>
         <BasePage>
           <h1>Blog Page</h1>
         </BasePage>
