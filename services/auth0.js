@@ -1,5 +1,6 @@
 import auth0 from 'auth0-js';
 import Cookies from 'js-cookie';
+import jwt from 'jsonwebtoken';
 
 class Auth0 {
   constructor() {
@@ -56,8 +57,22 @@ class Auth0 {
     return new Date().getTime() < expiresAt;
   };
 
+  verifyToken(token) {
+    if (token) {
+      const decodedToken = jwt.decode(token);
+      const expiresAt = decodedToken.exp * 1000;
+      return decodedToken && new Date().getTime() < expiresAt
+        ? decodedToken
+        : undefined;
+    }
+    return undefined;
+  }
+
   clientAuth = () => {
-    return this.isAuthenticated();
+    const token = Cookies.getJSON('jwt');
+    const verifiedToken = this.verifyToken(token);
+
+    return verifiedToken;
   };
 
   serverAuth = req => {
@@ -66,24 +81,28 @@ class Auth0 {
 
       const splitedCookies = cookies.split(':');
 
-      let expiresAtCookie;
+      let tokenCookie;
 
       splitedCookies.find(c => {
         c.trim()
           .split(' ')
           .find(d => {
-            if (d.startsWith('expiresAt')) {
-              expiresAtCookie = d;
+            if (d.startsWith('jwt=')) {
+              tokenCookie = d.substring(0, d.length - 1);
             }
           });
       });
 
-      if (!expiresAtCookie) return false;
+      if (!tokenCookie) return false;
 
-      const expiresAt = expiresAtCookie.split('=')[1];
+      const token = tokenCookie.split('=')[1];
 
-      return new Date().getTime() < expiresAt;
+      const verifiedToken = this.verifyToken(token);
+
+      return verifiedToken;
     }
+
+    return undefined;
   };
 }
 
