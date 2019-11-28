@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { withRouter } from "next/router";
-import axios from "axios";
+import React, { Component } from 'react';
+import { withRouter } from 'next/router';
+import axios from 'axios';
 
-import BaseLayout from "../components/layouts/BaseLayout";
-import BasePage from "../components/layouts/BasePage";
+import BaseLayout from '../components/layouts/BaseLayout';
+import BasePage from '../components/layouts/BasePage';
 
 class PortfolioDetails extends Component {
   static async getInitialProps({ query }) {
@@ -26,7 +26,7 @@ class PortfolioDetails extends Component {
     const { title, id, body } = this.props;
 
     return (
-      <BaseLayout>
+      <BaseLayout {...this.props.auth}>
         <BasePage>
           <h1>PortfolioDetails Page</h1>
           <h2>{title}</h2>

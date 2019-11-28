@@ -1,20 +1,48 @@
 import React from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from 'reactstrap';
 import Link from 'next/link';
+import auth0 from '../../services/auth0';
+
+const Login = () => {
+  return (
+    <span onClick={auth0.login} className="nav-link port-navbar-link clickable">
+      Login
+    </span>
+  );
+};
+
+const Logout = () => {
+  return (
+    <span
+      onClick={auth0.logout}
+      className="nav-link port-navbar-link clickable"
+    >
+      Logout
+    </span>
+  );
+};
 
 const BsNavLink = props => {
   const { route, title } = props;
 
-  return(
+  return (
     <Link href={route}>
       <a className="nav-link port-navbar-link">{title}</a>
     </Link>
   );
-}
+};
 
 class Header extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
@@ -28,18 +56,24 @@ class Header extends React.Component {
   }
 
   render() {
+    const { isAuthenticated } = this.props;
+
     return (
       <div>
-        <Navbar className="port-navbar port-default absolute" color="transparent" light expand="md">
+        <Navbar
+          className="port-navbar port-default absolute"
+          color="transparent"
+          light
+          expand="md"
+        >
           <NavbarBrand className="port-navbar-brand" href="/">
             Abdur Rahman Robin
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-
               <NavItem className="port-navbar-item">
-                <BsNavLink route="/" title='Home' />
+                <BsNavLink route="/" title="Home" />
               </NavItem>
 
               <NavItem className="port-navbar-item">
@@ -58,6 +92,15 @@ class Header extends React.Component {
                 <BsNavLink route="/cv" title="CV" />
               </NavItem>
 
+              {isAuthenticated ? (
+                <NavItem className="port-navbar-item">
+                  <Logout />
+                </NavItem>
+              ) : (
+                <NavItem className="port-navbar-item">
+                  <Login />
+                </NavItem>
+              )}
             </Nav>
           </Collapse>
         </Navbar>

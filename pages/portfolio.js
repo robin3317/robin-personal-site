@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import axios from "axios";
-import { Link } from "../routes";
+import React, { Component } from 'react';
+import axios from 'axios';
+import { Link } from '../routes';
 
-import BaseLayout from "../components/layouts/BaseLayout";
-import BasePage from "../components/layouts/BasePage";
+import BaseLayout from '../components/layouts/BaseLayout';
+import BasePage from '../components/layouts/BasePage';
 
 class Portfolio extends Component {
   // Fetching data from api
@@ -11,7 +11,7 @@ class Portfolio extends Component {
     let posts = [];
     try {
       const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/posts"
+        'https://jsonplaceholder.typicode.com/posts'
       );
       posts = response.data;
     } catch (error) {
@@ -38,7 +38,7 @@ class Portfolio extends Component {
     const { posts } = this.props;
 
     return (
-      <BaseLayout>
+      <BaseLayout {...this.props.auth}>
         <BasePage>
           <h1>Portfolio Page</h1>
           <ul>{this.renderPosts(posts)}</ul>

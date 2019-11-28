@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import axios from "axios";
-import ReactTyped from "react-typed";
+import React, { Component } from 'react';
+import axios from 'axios';
+import ReactTyped from 'react-typed';
 
-import BaseLayout from "../components/layouts/BaseLayout";
-import { Container, Row, Col } from "reactstrap";
+import BaseLayout from '../components/layouts/BaseLayout';
+import { Container, Row, Col } from 'reactstrap';
 
 class Index extends Component {
   static async getInitialProps() {
     let userData = {};
     try {
       const response = await axios.get(
-        "https://jsonplaceholder.typicode.com/todos/1"
+        'https://jsonplaceholder.typicode.com/todos/1'
       );
       userData = response.data;
     } catch (error) {
@@ -22,9 +22,10 @@ class Index extends Component {
 
   render() {
     const { userData } = this.props;
+    const { isAuthenticated, user } = this.props.auth;
 
     return (
-      <BaseLayout className="cover">
+      <BaseLayout className="cover" {...this.props.auth}>
         <div className="main-section">
           <Container>
             <Row>
@@ -47,9 +48,10 @@ class Index extends Component {
               <Col md="7" className="hero-welcome-wrapper">
                 <div className="hero-welcome-text">
                   <h1>
-                    Welcome to the portfolio website of Abdur Rahman Robin. Get
-                    informed, collaborate and discover projects I was working on
-                    through the years!
+                    {isAuthenticated && user.family_name} Welcome to the
+                    portfolio website of Abdur Rahman Robin. Get informed,
+                    collaborate and discover projects I was working on through
+                    the years!
                   </h1>
                 </div>
 
@@ -58,7 +60,7 @@ class Index extends Component {
                   loop={true}
                   typeSpeed={50}
                   backSpeed={20}
-                  strings={["Developer", "Content Creator", "Team Player"]}
+                  strings={['Developer', 'Content Creator', 'Team Player']}
                   smartBackspace
                   fadeOut={false}
                   fadeOutDelay={100}
