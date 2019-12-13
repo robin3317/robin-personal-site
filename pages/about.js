@@ -4,6 +4,7 @@ import BasePage from '../components/layouts/BasePage';
 
 class About extends Component {
   render() {
+    console.log('About', this.props);
     return (
       <BaseLayout {...this.props.auth}>
         <BasePage>
