@@ -27,7 +27,7 @@
     "jwks-rsa": "^1.6.0",
     "next": "^8.1.0",
     "next-routes": "^1.4.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-typed": "^1.2.0",
